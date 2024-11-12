@@ -1,0 +1,134 @@
+/* Color Variables */
+:root {
+    --white: #fefefe;
+    --light-gray: #e0e0e0;
+    --dark-gray: #3b3b3b;
+    --dark-bg: #232323;
+    --light-bg: #dcdfe1;
+    --light-shadow: rgba(0, 0, 0, 0.1);
+    --dark-shadow: rgba(0, 0, 0, 0.25);
+    --highlight: #00bcd4;
+    --text-light: #d1d1d1;
+    --text-dark: #2d2d2d;
+}
+
+/* Background Gradient */
+body.bg-gradient {
+    background: linear-gradient(to right, var(--light-bg), var(--dark-bg));
+}
+
+/* Main Card & Neumorphic Card */
+.card,
+.main-card,
+.neumorphic-button,
+.book-card {
+    background: var(--light-gray);
+    border-radius: 16px;
+    box-shadow: 4px 4px 12px var(--light-shadow),
+                -4px -4px 12px rgba(255, 255, 255, 0.6);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card,
+.book-card,
+.main-card {
+    padding: 20px;
+}
+
+.main-card {
+    background: rgba(var(--white), 0.95);
+}
+
+.neumorphic-button,
+.neumorphic-input,
+.book-card {
+    padding: 12px 24px;
+    margin-bottom: 20px;
+}
+
+.book-card {
+    margin-bottom: 20px;
+}
+
+.neumorphic-input {
+    border: 1px solid var(--light-gray);
+    outline: none;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.neumorphic-input,
+.neumorphic-button {
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px var(--light-shadow),
+                -4px -4px 10px rgba(255, 255, 255, 0.6);
+}
+
+.neumorphic-button:hover,
+.book-card:hover,
+.shadow-neumorphic:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2),
+                -3px -3px 8px rgba(255, 255, 255, 0.6);
+    transform: translateY(-3px);
+}
+
+/* Theme Dark */
+.theme-dark {
+    background-color: var(--dark-bg) !important;
+    color: var(--text-light) !important;
+}
+
+.theme-dark .card,
+.theme-dark .book-card,
+.theme-dark .main-card {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    box-shadow: 4px 4px 14px var(--dark-shadow),
+                -4px -4px 14px rgba(255, 255, 255, 0.15);
+}
+
+.theme-dark .neumorphic-button,
+.theme-dark .neumorphic-input {
+    background: var(--dark-gray);
+    color: var(--text-light);
+}
+
+.theme-dark .neumorphic-button:hover {
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3),
+                -3px -3px 7px rgba(255, 255, 255, 0.1);
+}
+
+.theme-dark .btn-toggle {
+    color: var(--highlight);
+}
+
+.theme-dark .bi-moon-fill {
+    display: none;
+}
+
+/* Theme Light */
+.theme-light .bi-sun-fill {
+    display: none;
+}
+
+.theme-light .btn-toggle {
+    color: var(--text-dark);
+}
+
+/* Neumorphic Shadow Effect */
+.shadow-neumorphic {
+    box-shadow: 5px 5px 12px var(--dark-shadow),
+                -5px -5px 12px rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease-in-out;
+}
+
+/* SweetAlert2 Popup Styling */
+.swal2-popup {
+    font-size: 1.1rem;
+    border-radius: 16px;
+}
+
+/* Global Transition */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
